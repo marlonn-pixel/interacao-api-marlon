@@ -11,11 +11,11 @@ const api = {
         }
     },
 
-async salvarPensamentos(){
+async salvarPensamentos(pensamento){
         try{
             const response = await fetch('http://localhost:3000/Pensamentos', {
                 method: "POST",
-                headers: {
+                headers: { 
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(pensamento)
@@ -26,6 +26,19 @@ async salvarPensamentos(){
         }
         catch{
             alert('Erro ao salvar pensamentos')
+            throw error
+        }
+    },
+
+    async excluirPensamento(id){
+        try{
+            const response = await fetch(`http://localhost:3000/pensamentos/${id}`, {
+                method: "DELETE"
+            })
+        }
+
+        catch{
+            alert('Falha ao excluir o pensamento grafado')
             throw error
         }
     }

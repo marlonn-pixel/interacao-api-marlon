@@ -13,7 +13,7 @@ const userInterface = {
         }
     },
 
-    adicionarPensamentosNaLista(){
+    adicionarPensamentosNaLista(pensamento){
         //CONSTRUINDO O ITEM DA LISTA (UMA NOVA FRASE)
         const listaPensamentos = document.getElementById("lista-pensamentos");
         const li = document.createElement("li");
@@ -40,9 +40,23 @@ const userInterface = {
         li.appendChild(iconeAspas)
         li.appendChild(pensamentoConteudo)
         li.appendChild(pensamentoAutoria)
+        listaPensamentos.appendChild(li)
+
+        const botaoExcluir = document.createElement("button")
+        botaoExcluir.classList.add("botao-excluir")
+        botaoExcluir.onclick = async () => {
+            try{
+                await api.excluirPensamento(pensamento.id)
+                userInterface.renderizarPensamentos();
+            }
+
+            catch(error){
+                alert('Falha ao excluir pensamento')
+            }
+
+        }
 
     }
-    
-}
 
+}
 export default userInterface;
