@@ -3,6 +3,7 @@ import api from "./api.js";
 const userInterface = {
     async renderizarPensamentos() {
         const listaPensamentos = document.getElementById("lista-pensamentos")
+        listaPensamentos.innerHTML = "";
 
         try{
             const pensamentos = await api.buscarPensamentos()
@@ -55,6 +56,15 @@ const userInterface = {
             }
 
         }
+        const iconeExcluir = document.createElement("img");
+        iconeExcluir.src = "assets/imagens/icone-excluir.png";
+        iconeExcluir.alt = "Excluir Pensamento";
+        botaoExcluir.appendChild(iconeExcluir);
+
+        const icones = document.createElement("div");
+        icones.classList.add("icones");
+        icones.appendChild(botaoExcluir);
+        li.appendChild(icones)
 
     }
 

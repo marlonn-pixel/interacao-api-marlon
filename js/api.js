@@ -32,7 +32,7 @@ async salvarPensamentos(pensamento){
 
     async excluirPensamento(id){
         try{
-            const response = await fetch(`http://localhost:3000/pensamentos/${id}`, {
+            const response = await fetch(`http://localhost:3000/Pensamentos/${id}`, {
                 method: "DELETE"
             })
         }

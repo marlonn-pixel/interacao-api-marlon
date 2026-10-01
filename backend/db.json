@@ -1,9 +1,9 @@
 {
   "Pensamentos": [
     {
-      "id": "2a56",
-      "conteudo": "Só sei que nada sei.",
-      "autoria": "Sócrates"
+      "conteudo": "Não ignore metade do que eu sou só para colocar um rótulo em mim. Não faça isso.",
+      "autoria": "Livro \"Os Sete Maridos de Evelyn Hugo\"",
+      "id": "TsH49dq"
     },
     {
       "id": "4c7d",
@@ -64,11 +64,7 @@
       "id": "4d2e",
       "conteudo": "A liberdade é aquilo que fazemos com o que fizeram de nós.",
       "autoria": "Jean-Paul Sartre"
-    },
-    {
-      "conteudo": "Não ignore metade do que eu sou só para colocar um rótulo em mim. Não faça isso.",
-      "autoria": "Livro \"Os Sete Maridos de Evelyn Hugo\"",
-      "id": "TsH49dq"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
